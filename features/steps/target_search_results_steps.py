@@ -29,18 +29,21 @@ def side_nav_click_add_to_cart(context):
     context.driver.find_element(*SIDE_NAV_ADD_TO_CART_BTN).click()
     sleep(6)
 
+
 @then('Verify search results shown for {expected_product}')
 def verify_search_results(context, expected_product):
     #actual_text = context.driver.find_element(By.XPATH, "//div[@data-test='resultsHeading']").text
     #assert expected_product in actual_text, f'Expected {expected_product} not in actual {actual_text}'
-    context.app.search_results_page.verify_text()
+    #context.app.search_results_page.verify_text()
+    context.app.search_results_page.verify_search_results(expected_product)
 
 
 @then('Verify correct search results URL opens for {expected_product}')
 def verify_url(context, expected_product):
     #url = context.driver.current_url
     #assert expected_product in url, f'Expected {expected_product} not in {url}'
-    context.app.search_results_page.verify_url()
+    #context.app.search_results_page.verify_url()
+    context.app.search_results_page.verify_product_in_url(expected_product)
 
 
 @then('Verify that every product has a name and an image')

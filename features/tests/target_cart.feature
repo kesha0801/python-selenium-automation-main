@@ -1,15 +1,14 @@
 Feature: Tests for Cart functionality
 
-#This scenario is for Homework4:
-#3. Create a test case to add any Target’s product into the cart,
-#and make sure it’s there (check that your cart has individual cart items OR the total price, up to you!)
 
+
+  #Homework 7 updating below scenario to page object pattern
 
   Scenario: Product is added to cart
     Given Open target main page
     When Search for pencil
     Then Click add to cart
-    Then Verify cart has pencil
+    Then Verify cart has correct product
 
 
 
