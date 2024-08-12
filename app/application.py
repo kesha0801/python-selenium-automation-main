@@ -4,6 +4,8 @@ from pages.base_page import Page
 from pages.search_results_page import SearchResultsPage
 from pages.cart_page import CartPage
 from pages.signin_page import Signin
+from pages.privacy_policy_page import PrivacyPage
+from pages.target_app_page import TargetAppPage
 
 
 class Application:
@@ -15,6 +17,8 @@ class Application:
         self.header = Header(driver)
         self.main_page = MainPage(driver)
         self.search_results_page = SearchResultsPage(driver)
+        self.privacy_policy_page = PrivacyPage(driver)
+        self.target_app_page = TargetAppPage(driver)
 
 
 
